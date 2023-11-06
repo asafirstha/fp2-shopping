@@ -1,0 +1,31 @@
+.product__cart {
+    max-width: 200px;
+    border: 1px solid #80808033;
+    margin: 5px;
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  .cart img:hover {
+    transform: scale(1.1);
+  }
+  .cart img {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+  }
+  .cart_addItem div {
+    margin: 3px 0;
+  }
+  .meal_title p {
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    color: black;
+    background: white;
+  }
+  
