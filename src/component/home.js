@@ -8,7 +8,8 @@ import TotalProducts from "./item";
 import Navbar from "./Navbar";
 import Login from "./login";
 import ProductDetail from "./productDetail"; 
-import Checkout from "./checkout";
+import Checkout from "./checkout"
+import PaymentMethod from "./paymnetMethod";
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
           <Route path="/productDetails/:productId" element={<ProductDetail />} /> {/* Perbaiki nama komponen */}
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/paymentMethod" element={<PaymentMethod />} />
           <Route path="*" element={<h1>404 Not Found!</h1>} />
         </Routes>
         <Footer />
