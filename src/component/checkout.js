@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { checkout } from "../redux/action/action";
+import { Link } from "react-router-dom";
 import "./style/checkout.css";
 
 function Checkout() {
@@ -28,7 +29,6 @@ function Checkout() {
     <div>
       <h2>Checkout</h2>
       <div>
-        {/* Tampilkan rincian pembelian */}
         {productCart.map((item) => {
           const product = products.find((p) => p.id === item.id);
           return (
@@ -38,8 +38,10 @@ function Checkout() {
           );
         })}
       </div>
-      <p>Total: ${calculateTotal().toFixed(2)}</p>
-      <button onClick={handlePayment}>Pay Now</button> {/* Tombol pembayaran simulasi */}
+      <p>Metode Pembayaran: {calculateTotal().toFixed(2)}</p>
+      <Link to="/paymentMethod">
+        <button onClick={handlePayment}>Pay Now</button>
+      </Link>
     </div>
   );
 }
